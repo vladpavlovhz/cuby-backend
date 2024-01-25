@@ -42,7 +42,7 @@ const authenticateMiddleware = (req, res, next) => {
 };
 
 const authProxy = createProxyMiddleware({
-  target: 'http://auth-ms:3013',
+  target: process.env.AUTH_URL || 'http://auth-ms:3013',
   changeOrigin: true,
   onProxyReq: fixRequestBody,
   onProxyRes: (proxyRes, req, res) => {
@@ -63,19 +63,19 @@ const authProxy = createProxyMiddleware({
 });
 
 const eventProxy = createProxyMiddleware({
-  target: 'http://events-ms:3010',
+  target: process.env.EVENTS_URL || 'http://events-ms:3010' ,
   changeOrigin: true,
   onProxyReq: fixRequestBody,
 });
 
 const calendarProxy = createProxyMiddleware({
-  target: 'http://calendar-ms:3015',
+  target: process.env.CALENDAR_URL || 'http://calendar-ms:3015' ,
   changeOrigin: true,
   onProxyReq: fixRequestBody,
 });
 
 const profileProxy = createProxyMiddleware({
-  target: 'http://profile-ms:3012',
+  target: process.env.PROFILES_URL || 'http://profiles-ms:3012',
   changeOrigin: true,
   onProxyReq: fixRequestBody,
 });

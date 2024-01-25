@@ -4,8 +4,6 @@ import * as dotenv from 'dotenv';
 
 import indexRouter from './routes/router.js';
 
-dotenv.config({ path: 'variables.env' });
-
 const app = express();
 
 app.use((req, res, next) => {

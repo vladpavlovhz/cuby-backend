@@ -18,4 +18,4 @@ COPY ./code /usr/src/app
 EXPOSE 3013
 
 # Run npm install and npm run dev when the container launches
-CMD ["bash", "-c", "npm install && npm run dev"]
+CMD ["npm install && npm run dev"]
