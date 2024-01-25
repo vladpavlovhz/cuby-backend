@@ -1,2 +1,21 @@
-FROM node:18.9.0
+FROM node:alpine
+
 RUN mkdir -p /usr/src/app
+
+# Set the working directory in the container
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json to the working directory
+COPY ./code/package*.json /usr/src/app
+
+# Install the application dependencies
+RUN npm install
+
+# Copy the local code to the container
+COPY ./code /usr/src/app
+
+# Expose port 3011
+EXPOSE 3013
+
+# Run npm install and npm run dev when the container launches
+CMD ["bash", "-c", "npm install && npm run dev"]
