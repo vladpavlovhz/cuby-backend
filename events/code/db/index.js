@@ -12,6 +12,9 @@ const createPool = () => new Pool({
   database: process.env.POSTGRES_DB,
   password: process.env.POSTGRES_PASSWORD,
   port: process.env.DB_PORT || 5432,
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 
