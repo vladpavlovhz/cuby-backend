@@ -16,3 +16,5 @@ COPY ./code /usr/src/app
 
 # Expose port 3011
 EXPOSE 3011
+
+CMD [ "npm", "start" ]
