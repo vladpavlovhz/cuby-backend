@@ -14,8 +14,5 @@ RUN npm install
 # Copy the local code to the container
 COPY ./code /usr/src/app
 
-# Expose port 3015
+# Expose port 3010
 EXPOSE 3010
-
-# Run npm install and npm run dev when the container launches
-CMD ["npm install && npm run dev"]

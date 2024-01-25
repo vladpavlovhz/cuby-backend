@@ -16,6 +16,3 @@ COPY ./code /usr/src/app
 
 # Expose port 3015
 EXPOSE 3015
-
-# Run npm install and npm run dev when the container launches
-CMD ["npm install && npm run dev"]

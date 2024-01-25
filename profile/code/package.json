@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "dev:win": "./node_modules/.bin/nodemon index.js",
     "seed": "node seeders/profileSeeder.mjs"
