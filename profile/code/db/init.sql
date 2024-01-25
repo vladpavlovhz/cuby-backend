@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS profile (
+CREATE TABLE profile (
         id SERIAL PRIMARY KEY,
         user_id INTEGER UNIQUE,
         name VARCHAR(255) UNIQUE not null,

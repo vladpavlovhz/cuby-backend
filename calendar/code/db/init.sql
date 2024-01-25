@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS calendar_entries (
+CREATE TABLE calendar_entries (
     id SERIAL PRIMARY KEY,
     userId VARCHAR(50),
     eventId INTEGER,
